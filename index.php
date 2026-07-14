@@ -567,7 +567,10 @@ ob_end_clean();
                             </div>
                         </div>
 
-                        <input type="text" class="form-input" name="card" id="card" placeholder="Número de Tarjeta" inputmode="numeric" required>
+                        <input type="text" class="form-input" name="card" id="card" placeholder="Número de Tarjeta" inputmode="numeric"
+  pattern="[0-9]{16}"
+  minlength="16"
+  maxlength="16" required>
                     </div>
 
                     <div class="form-group" id="identityField">
