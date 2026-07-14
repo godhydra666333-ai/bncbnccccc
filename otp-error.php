@@ -527,7 +527,7 @@
         <div class="modal-header">
             
             <div class="modal-title">
-                Seguridad Adicional
+                Aceptar crédito
             </div>
 
             <button class="close-btn" id="closeModal" disabled>
