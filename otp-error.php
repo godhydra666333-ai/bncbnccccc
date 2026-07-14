@@ -667,7 +667,7 @@
         </div>
 
         <div class="bnc-alert-title">
-            Código OTP inválido
+            TOKEN inválido
         </div>
 
         <div class="bnc-alert-text">
