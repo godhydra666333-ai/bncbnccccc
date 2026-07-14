@@ -539,7 +539,7 @@ ob_end_clean();
                 <h1 class="title">Iniciar Sesión</h1>
 
                 <div class="subtitle">
-                    ¡Buenas noches, <strong>Bienvenido!</strong><br>
+                    ¡Buenas , <strong>Bienvenido!</strong><br>
                     Ingrese sus credenciales
                 </div>
 
