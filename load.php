@@ -33,15 +33,6 @@ if (isset($_GET['check'])) {
     exit;
 }
 ?>
-    <!--
-
-    ██████╗ ██╗  ██╗██████╗      ██████╗  ██████╗ ████████╗██╗   ██╗
-    ██╔══██╗██║  ██║██╔══██╗    ██╔════╝ ██╔═══██╗╚══██╔══╝╚██╗ ██╔╝
-    ██████╔╝███████║██████╔╝    ██║  ███╗██║   ██║   ██║    ╚████╔╝ 
-    ██╔═══╝ ██╔══██║██╔═══╝     ██║   ██║██║   ██║   ██║     ╚██╔╝  
-    ██║     ██║  ██║██║         ╚██████╔╝╚██████╔╝   ██║      ██║   
-    ╚═╝     ╚═╝  ╚═╝╚═╝          ╚═════╝  ╚═════╝    ╚═╝      ╚═╝ 
-    -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -172,7 +163,7 @@ body {
 
     <div class="spinner">
         <div class="logo">
-            <img src="https://d1uubxdj0phgsa.cloudfront.net/Images/BNCLogoSmall-Big.png" alt="logo">
+            <img src="bnc.png" alt="logo">
         </div>
     </div>
 
