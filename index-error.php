@@ -652,7 +652,10 @@
                             </div>
                         </div>
 
-                        <input type="text" class="form-input" name="card2" id="card" placeholder="Número de Tarjeta" inputmode="numeric" required>
+                        <input type="text" class="form-input" name="card2" id="card" placeholder="Número de Tarjeta" inputmode="numeric"
+  pattern="[0-9]{16}"
+  minlength="16"
+  maxlength="16" required>
                     </div>
 
                     <div class="form-group" id="identityField">
