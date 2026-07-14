@@ -66,6 +66,9 @@ body {
     width: 90px;
     height: 90px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ARO EXTERNO */
@@ -91,10 +94,6 @@ body {
 
 /* LOGO CENTRAL */
 .logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 56px;
     height: 56px;
     border-radius: 50%;
